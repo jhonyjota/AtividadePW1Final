@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stilo.css">
+	<title>SIC</title>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<form>
+<div id="tudo">
+<img id="logo" src="img/logo.png">
+	<div id="interface">
+
+		<div id="cabecalho">
+			<p>Formulário de solicitação de informacão (Pessoa Fisica)</p>
+			<div id="marcos"> </div>
+		</div>
+		<p id="fundoCinza">As informações abaixo são obrigatórias </p>
+		<div id="camposObrigatorios">
+			<p>Nome: 
+			<input type="text" name="nome" value="" size="91"  pattern="[a-z\s]+$" required="yes" /></p>
+			<p>CPF:  &ensp;
+			<input type="text" name="cpf" maxlength="11" onblur="return verificarCPF(this.value)"/>
+
+			<div id="fontNormal"></p>
+			Ou, se preferir, informar outro documento de identificação (RG, CNH, Passaporte, RNE ou outro documento válido. Se a opção for por RG, indicar Órgão emissor e UF):
+			</div>
+			<p>Tipo de documento: &ensp;
+			<input type="text" name="tipoDocumento" value="" size="30" required="yes" />
+			&ensp; Nº:&ensp;
+			<input type="text" name="numero" value="" size="30" required="yes" /></p>
+			<p>Endereco eletronico (e-mail):
+			<input type="email" name="eMail" value="" size="69" required="yes" />
+			</p>
+			<p>ou</p>
+			<p>Endereco físico (Rua, nº, complemento, Bairro):</p>
+			<input type="text" name="endFisico" value="" size="97" required="yes" />
+			<p>Cidade:
+			<input type="text" name="cidade" value="" size="36" required="yes" />
+			&ensp;Estado:
+			<select name="estados-brasil" required="yes">
+	<option value="">Selecione</option>
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espírito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraíba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantins</option>
+		</select>
+			&ensp;UF:
+			<select name="uf" id="uf" required="yes">
+	<option value="">Selecione</option>
+	<option value="AC">AC</option>
+	<option value="AL">AL</option>
+	<option value="AM">AM</option>
+	<option value="AP">AP</option>
+	<option value="BA">BA</option>
+	<option value="CE">CE</option>
+	<option value="DF">DF</option>
+	<option value="ES">ES</option>
+	<option value="GO">GO</option>
+	<option value="MA">MA</option>
+	<option value="MG">MG</option>
+	<option value="MS">MS</option>
+	<option value="MT">MT</option>
+	<option value="PA">PA</option>
+	<option value="PB">PB</option>
+	<option value="PE">PE</option>
+	<option value="PI">PI</option>
+	<option value="PR">PR</option>
+	<option value="RJ">RJ</option>
+	<option value="RN">RN</option>
+	<option value="RS">RS</option>
+	<option value="RO">RO</option>
+	<option value="RR">RR</option>
+	<option value="SC">SC</option>
+	<option value="SE">SE</option>
+	<option value="SP">SP</option>
+	<option value="TO">TO</option>
+ 			</select>
+			</p>
+			<p>CEP:
+			<input type="text" name="cep" value="" size="20" required="yes" />
+			&ensp;País:
+			<input type="text" name="pais" value="" size="64" required="yes" />
+			</p>
+		</div>
+
+		<p id="fundoCinza"> Os campos a seguir são opcionais e se preenchidos contribuirão para a melhoria de nossos serviços</p>
+
+		<div id="camposOpcionais">
+			<p>Sexo:
+			 <input type="radio" name="sexo" value="masculino">
+			 Maculino
+			 <input type="radio" name="sexo" value="feminino">
+			 Feminino
+	         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Data de nascimento:
+			<input type="date" name="dataNasc" value="" size="20" />
+			</p>
+			<b>Escolaridade</b>
+			<table>
+			<tr><td><input type="radio" name="esc" value="seminst">Sem instrução formal</td>
+			<td><input type="radio" name="esc" value="es"> Ensino Superior</td>
+			<td><input type="radio" name="esc" value="ef"> Doutorado</td>
+			</tr>
+			<tr><td><input type="radio" name="esc" value="ef">Ensino Fundamental</td>
+			<td><input type="radio" name="esc" value="esp">
+			Especialização</td>
+			<td><input type="radio" name="esc" value="em">Ensino Médio</td></tr>
+			<td><input type="radio" name="esc">Mestrado</td>
+			 	</table>
+				<br>
+			<b>Ocupação principal / Profissão</b>
+	
+			<table>
+				<tr>
+				<td><input type="radio" name="opp" value="empsp">Empregado - setor privado</td>
+				<td><input type="radio" name="opp" value="pesq">Pesquisador</td>
+				<td><input type="radio" name="opp" value="svpe"> Servidor público estadual</td>
+				</tr>
+			    <tr><td><input type="radio" name="opp" value="jrnl">Jornalista</td>
+			    <td><input type="radio" name="opp" value="prfs">Professor</td>
+			    <td><input type="radio" name="opp" value="svm"> Servidor público municipal</td>
+				</tr>
+			    <tr><td><input type="radio" name="opp" value="mpp">Membro de partido político</td>
+			    <td><input type="radio" name="opp" value="est">Estudante</td>
+			    <td><input type="radio" name="opp" value="mon"> Membro de ONG nacional</td>
+			    </tr>
+			    <tr><td><input type="radio" name="opp" value="rpst">Representante de Sindicato</td>
+				<td><input type="radio" name="opp" value="emp">Empresário/empreendedor</td>
+				<td><input type="radio" name="opp" value="moi"> Membro de ONG internacional</td>
+				</tr>
+			    <tr><td><input type="radio" name="opp" value="pla">Profis. Liberal/autônomo</td>
+				<td><input type="radio" name="opp" value="spf"> Servidor público federal</td></tr>
+			    <tr><td><input type="radio" name="opp" value="out">Outras</td>
+				</tr>
+				</table> 
+
+			<p>Telefone: 
+
+			(<input type="text" name="DDD" value="" size="1" />)
+			<input type="text" name="telefone" value="" size="20"  />
+		</p>
+		</div>
+	</div>
+
+		<p id="fundoCinza">
+			Especificação do pedido de acesso à informação
+		</p>
+
+		<div id="especificacaoPedido">
+			<p>Órgão/Entidade destinatário do pedido: </p>
+			<input type="text" name="orgaoDestinataria" value="" size="101"  />
+			<p>Forma preferencial de recebimento da resposta:</p>
+			<input type="radio" name="formaRecebimento" value="buscarPessoalmente">
+			Buscar/Consultar pessoalmente
+			<input type="radio" name="formaRecebimento" value="email">
+			E-mail
+			<input type="radio" name="formaRecebimento" value="carta">
+			Por carta (com custo)
+			<p>Especificação do pedido:</p>
+			<textarea name="message" rows="13" cols="103"></textarea>
+			<br><br>
+			</form>
+			<button id="enviar" type="submit" name="myButton" value="foo">Enviar</button>
+			<br><br>
+		</div>
+	</div>
+
+</body>
+</html>

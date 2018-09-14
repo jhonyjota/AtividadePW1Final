@@ -1,0 +1,64 @@
+#fundoCinza{
+	background-color: #CCCCCC;
+	
+}
+#camposObrigatorios{
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	margin-top: -10px;
+	
+}
+#camposOpcionais{
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 10px;
+	margin-top: -10px;
+		
+}
+
+#especificacaoPedido{
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 10px;
+	margin-top: -10px;
+		
+}
+
+p{
+ font-weight: bold;
+}
+#cabecalho{
+	font-size: 20px;
+}
+#escolaridade{
+
+}
+input{
+	background-color: #CEE3F6;
+	border: none;
+}
+
+body{
+
+	
+}
+#marcos{
+	background-color: #CCCCCC;
+    margin-top: -20px;
+	
+}
+#logo{
+	margin-left: 600px;
+	margin-top: 0px;
+	margin-bottom: -45px;
+}
+#tudo{
+margin-left:400px;
+margin-right:400px;
+}
+textarea {
+	background-color: #CEE3F6;
+}
+
